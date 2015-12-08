@@ -16,14 +16,21 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        
-        int direction = Greenfoot.getRandomNumber(360);
-        addObject (new Ball(direction), 300, 200);
+
     }
+
     /**
      * Check for mouse clicks
      */
     public void act()
     {
-        if (mouse
+        if (Greenfoot.mouseClicked(null)) {
+            //declared local variable
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            
+            int direction = Greenfoot.getRandomNumber(360);
+            addObject (new Ball(direction), mouse.getX(), mouse.getY());
+
+        }
+    }
 }
