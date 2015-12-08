@@ -20,4 +20,10 @@ public class MyWorld extends World
         int direction = Greenfoot.getRandomNumber(360);
         addObject (new Ball(direction), 300, 200);
     }
+    /**
+     * Check for mouse clicks
+     */
+    public void act()
+    {
+        if (mouse
 }
