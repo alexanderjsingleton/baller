@@ -8,23 +8,43 @@ import greenfoot.*;
  */
 public class Ball extends Actor
 {
+    private int imageNumber;
     /**
      * Act - do whatever the Ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Ball()
+    {
+        setRotation(270);
+        imageNumber = 0;
+    }
+
     public Ball(int direction)
     {
         setRotation(direction);
     }
-    
+
     public void act() 
     {
         move(4);
         if(atWorldEdge()) {
             turn(153);
+            changeImage();
         }
     }
+    /**
+     * Change the image(field) of this ball
+     */
+    public void changeImage()
+    {
+        imageNumber++;
+        if (imageNumber == 5) {
+            imageNumber = 0;
+        }
+        setImage("button-" + imageNumber + ".png");
+    }
     
+
     /**
      * Test if we are close to one of the edges of the world. Return true is we are.
      */

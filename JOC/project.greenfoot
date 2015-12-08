@@ -1,7 +1,7 @@
 #Greenfoot properties
-#Tue Dec 08 10:50:06 CST 2015
+#Tue Dec 08 12:16:11 CST 2015
 class.MyWorld.superclass=greenfoot.World
-class.Ball.image=button-blue.png
+class.Ball.image=button-0.png
 class.Ball.superclass=greenfoot.Actor
 version=2.7.1
 project.charset=UTF-8
